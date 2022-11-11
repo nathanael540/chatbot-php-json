@@ -1,0 +1,55 @@
+{
+    "Olá,Oi,Ei,Opa": {
+        "hash": "chat-01",
+        "mensagem": "Olá, bem-vindo ao mundo!\nQual o seu nome?",
+        "tipo": "pergunta",
+        "variavel": "nome",
+        "proximo": {
+            "hash": "chat-02",
+            "mensagem": "{nome}, por favor escolha uma opção:",
+            "tipo": "escolha",
+            "opcoes": [
+                {
+                    "hash": "chat-03",
+                    "escolha": "Informar sobrenome",
+                    "mensagem": "Por favor, informe seu sobrenome:",
+                    "tipo": "pergunta",
+                    "variavel": "sobrenome",
+                    "proximo": {
+                        "hash": "chat-04",
+                        "mensagem": "Muito obrigado {nome} {sobrenome}!",
+                        "tipo": "flow",
+                        "proximo": "chat-02"
+                    }
+                },
+                {
+                    "hash": "chat-05",
+                    "escolha": "Informar idade",
+                    "mensagem": "Por favor, informe sua idade:",
+                    "tipo": "pergunta",
+                    "variavel": "idade",
+                    "proximo": {
+                        "hash": "chat-06",
+                        "mensagem": "Muito obrigado {nome}!",
+                        "tipo": "flow",
+                        "proximo": "chat-02"
+                    }
+                },
+                {
+                    "hash": "chat-07",
+                    "escolha": "Consultar meus dados",
+                    "mensagem": "Seus dados são:\nNome: {nome}\nSobrenome: {sobrenome}\nIdade: {idade}",
+                    "tipo": "flow",
+                    "proximo": "chat-02"
+                },
+                {
+                    "hash": "chat-08",
+                    "escolha": "Sair",
+                    "mensagem": "Obrigado por utilizar o nosso chat!",
+                    "tipo": "final",
+                    "proximo": null
+                }
+            ]
+        }
+    }
+}

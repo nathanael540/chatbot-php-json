@@ -1,0 +1,17 @@
+{
+    "pontos": {
+        "hash": "pontos-01",
+        "mensagem": "Para consultar seus pontos, informe o seu email:",
+        "tipo": "pergunta",
+        "variavel": "email",
+        "proximo": {
+            "hash": "pontos-02",
+            "mensagem": "Saldo de pontos: {pontos}",
+            "tipo": "api",
+            "url": "https:/api.com/points?email={email}",
+            "resultado": {
+                "pontos": "points"
+            }
+        }
+    }
+}
